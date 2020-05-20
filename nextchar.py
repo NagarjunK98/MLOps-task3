@@ -16,7 +16,7 @@ length=1
 X=[]
 Y=[]
 
-for i in range(0,len(data)-length)
+for i in range(0,len(data)-length):
     inp=int_to_char[i]
     oup=int_to_char[i+1]
     X.append(char_to_int[inp])
