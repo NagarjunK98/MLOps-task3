@@ -38,5 +38,11 @@ model.fit(X,Y,batch_size=len(X),verbose=1,epochs=100)
 
 pred=model.evaluate(X,Y)
 
-print("Accuracy is : ",pred[1]*100)
-
+#print("Accuracy is : ",pred[1]*100)
+try:
+    f=open("/newdir/o.txt","w")
+    f.write(str(int(pred[1]*100)))
+except:
+    print(end="")
+finally:
+    f.close()
