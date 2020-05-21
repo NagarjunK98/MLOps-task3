@@ -19,11 +19,11 @@ model.add(Dense(10, activation="softmax"))
 
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-model.fit(X_train, y_train,epochs=3)
+model.fit(X_train, y_train,epochs=1)
 
 pred1=model.evaluate(X_test,y_test)
 
-#print("Accuracy is : ",pred[1]*100)
+print("Accuracy is : ",pred1[1]*100)
 
 try:
     f=open("/newdir/o.txt","w")
