@@ -13,7 +13,12 @@ y_test = to_categorical(y_test)
 from keras.models import Sequential
 from keras.layers import Dense, Conv2D, Flatten
 model = Sequential()
-model.add(Conv2D(1, kernel_size=3, activation="relu", input_shape=(28,28,1)))
+model.add(Conv2D(2, kernel_size=3, activation="relu", input_shape=(28,28,1)))
+i=1
+n=4
+for i in range(i):
+    model.add(Conv2D(filters=n,kernel_size=3,activation="relu"))
+    n=n*2
 model.add(Flatten())
 model.add(Dense(10, activation="softmax"))
 
